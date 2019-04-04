@@ -44,6 +44,7 @@ supervisor \
       git \
       mysql-client \
       supervisor \
+      unzip \
       && apt-get clean \
       && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 >>>>>>> use ENTRYPOINT
