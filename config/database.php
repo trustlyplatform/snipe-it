@@ -88,10 +88,11 @@ return [
                 //'add_extra_option' => '--optionname=optionvalue',
             ],
             'options' => (env('DB_SSL')) ? [
-                PDO::MYSQL_ATTR_SSL_KEY    => env('DB_SSL_KEY_PATH'),  // /path/to/key.pem
-                PDO::MYSQL_ATTR_SSL_CERT   => env('DB_SSL_CERT_PATH'), // /path/to/cert.pem
-                PDO::MYSQL_ATTR_SSL_CA     => env('DB_SSL_CA_PATH'),   // /path/to/ca.pem
-                PDO::MYSQL_ATTR_SSL_CIPHER => env('DB_SSL_CIPHER')
+                PDO::MYSQL_ATTR_SSL_KEY                => env('DB_SSL_KEY_PATH'),  // /path/to/key.pem
+                PDO::MYSQL_ATTR_SSL_CERT               => env('DB_SSL_CERT_PATH'), // /path/to/cert.pem
+                PDO::MYSQL_ATTR_SSL_CA                 => env('DB_SSL_CA_PATH'),   // /path/to/ca.pem
+                PDO::MYSQL_ATTR_SSL_CIPHER             => env('DB_SSL_CIPHER'),
+                PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => env('DB_SSL_VERIFY_SERVER_CERT')
             ] : []
         ],
 
